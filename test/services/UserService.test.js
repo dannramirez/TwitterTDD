@@ -28,10 +28,10 @@
          const user1 = UserService.create(1, "dannramirez1", "Dann1");
          const user2 = UserService.create(2, "dannramirez2", "Dann2");
          const user3 = UserService.create(3, "dannramirez3", "Dann3");
-         const usernames = UserService.getAllUsernames([user1,user2,user3]);
-         expect(usernames).toContain("Dann1");
-         expect(usernames).toContain("Dann2");
-         expect(usernames).toContain("Dann3");
+         const usernames = UserService.getAllUsernames([user1, user2, user3]);
+         expect(usernames).toContain("dannramirez1");
+         expect(usernames).toContain("dannramirez2");
+         expect(usernames).toContain("dannramirez3");
      });
 
  });
