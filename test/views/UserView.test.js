@@ -34,14 +34,14 @@ describe('Test for UserView', () => {
 
     test('Return an object when try to create a new user with a payload with missing properties', () => {
         const payload1 = {
-            username: null,
+            username: "dannramirez",
         };
         const payload2 = {
-            username: "dann",
-            name: null,
+            username: "dannramirez",
+            name: "dann",
         };
         const payload3 = {
-            id: null
+            id: 12
         };
 
         const result1 = UserView.createUser(payload1);
