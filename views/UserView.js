@@ -8,15 +8,23 @@ class UserView {
             };
         }
 
+        let dataValues = ['id', 'username', 'name'];
+
         for (var key in payload) {
             if (payload.hasOwnProperty(key)) {
-                if(payload[key] === null || payload[key] === undefined){
-                    return{ error: `${key} necesitan tener un valor válido`}
+                if (payload[key] === null || payload[key] === undefined) {
+                    return {
+                        error: `${key} necesitan tener un valor válido`
+                    }
                 }
             }
+            dataValues = dataValues.filter(e => e !== key)
         }
-
-        return payload;
+        if (dataValues.length =! 0) {
+            return {
+                error: `${dataValues} necesitan tener un valor válido`
+            }
+        }
     }
 }
 
