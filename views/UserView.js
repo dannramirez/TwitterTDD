@@ -7,6 +7,15 @@ class UserView {
                 error: "payload no existe"
             };
         }
+
+        for (var key in payload) {
+            if (payload.hasOwnProperty(key)) {
+                if(payload[key] === null || payload[key] === undefined){
+                    return{ error: `${key} necesitan tener un valor válido`}
+                }
+            }
+        }
+
         return payload;
     }
 }
