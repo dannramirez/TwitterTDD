@@ -29,9 +29,8 @@ Solución: Crear una clase User y un constructor que guarde estos parámetros.
 **Scripts**
 
 * npm start - to run the project
-
 * npm test - to run tests of projects
 
 # Tests running:
 
-   ![image](./image/Readme/1651181065845.png)
+![1651603024718.png](image/Readme/1651603024718.png)
