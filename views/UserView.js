@@ -1,4 +1,4 @@
-const UserService = require('../app/services/UserService');
+const UserService = require('./../app/services/UserService');
 class UserView {
 
     static createUser(payload) {
@@ -20,11 +20,13 @@ class UserView {
             }
             dataValues = dataValues.filter(e => e !== key)
         }
-        if (dataValues.length =! 0) {
+
+        if (dataValues.length > 0) {
             return {
                 error: `${dataValues} necesitan tener un valor válido`
             }
         }
+        return UserService.create(payload.id, payload.username, payload.name);
     }
 }
 

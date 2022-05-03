@@ -62,7 +62,7 @@ describe('Test for UserView', () => {
         };
         const result = UserView.createUser(payload);
         expect(result.name).toBe("dann");
-        expect(result.username).toBe("dannramirez");
+        expect(result.userName).toBe("dannramirez");
         expect(result.id).toBe(12);
     });
 
